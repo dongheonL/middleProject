@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AnnouncementBoardAttach-Mapper">
+	<select id="selectAnnouncementBoardAttachByAbno" resultType="announcementBoardAttach">
+		select * 
+		from announcementBoardAttach 
+		where abno = #{abno}
+	</select>	
+	
+	<select id="selectAnnouncementBoardAttachByAano" resultType="announcementBoardAttach">
+		select *
+		from announcementBoardAttach
+		where aano=#{aano}
+	</select>
+	
+	<update id="insertAnnouncementBoardAttach">
+		insert into 
+		announcementBoardAttach (aano, uploadpath, filename, filetype, abno, attacher)
+		values (attach_seq.nextval, #{uploadPath}, #{fileName},#{fileType}, 
+				#{abno},#{attacher} )
+	</update>
+	
+	<update id="deleteAnnouncementBoardAttach">
+		delete 
+		from announcementBoardAttach
+		where aano = #{aano}
+	</update>
+	
+	<update id="deleteAllAnnouncementBoardAttach">
+		delete 
+		from announcementBoardAttach
+		where abno = #{abno}
+	</update>
+</mapper>

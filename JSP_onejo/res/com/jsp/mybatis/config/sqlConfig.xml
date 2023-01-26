@@ -1,0 +1,115 @@
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+
+
+
+<configuration>
+
+
+
+	<properties resource="com/jsp/properties/jdbc.properties" />
+
+	<typeAliases>
+		<typeAlias type="com.jsp.dto.NotificationBoardVO"
+			alias="notificationBoard" />
+		<typeAlias type="com.jsp.dto.NotificationAttachVO"
+			alias="notificationAttach" />
+		<typeAlias type="com.jsp.dto.WeeklyReportBoardVO"
+			alias="weeklyReportBoard" />
+		<typeAlias type="com.jsp.dto.WeeklyReportAttachVO"
+			alias="weeklyReportAttach" />
+		<!-- NoticeBoard -->
+		<typeAlias type="com.jsp.dto.NoticeBoardVO"
+			alias="noticeBoard" />
+		<typeAlias type="com.jsp.dto.NoticeBoardAttachVO"
+			alias="noticeBoardAttach" />
+		<!-- AnnouncementBoard -->
+		<typeAlias type="com.jsp.dto.AnnouncementBoardVO"
+			alias="announcementBoard" />
+		<typeAlias type="com.jsp.dto.AnnouncementBoardAttachVO"
+			alias="announcementBoardAttach" />
+		<typeAlias type="com.jsp.dto.TeacherAffairsBoardVO"
+			alias="teacherAffairsBoard" />
+		<typeAlias type="com.jsp.dto.NomalAffairsBoardVO"
+			alias="nomalAffairsBoard" />
+		<typeAlias type="com.jsp.dto.TeacherAffairsAttachVO"
+			alias="teacherAffairsAttach" />
+		<typeAlias type="com.jsp.dto.NomalAffairsAttachVO"
+			alias="nomalAffairsAttach" />
+		<typeAlias type="com.jsp.dto.AppointmentBoardVO"
+			alias="appointmentBoard" />
+		<typeAlias type="com.jsp.dto.AppointmentAttachVO"
+			alias="appointmentAttach" />
+		<typeAlias type="com.jsp.dto.QualificationBoardVO"
+			alias="qualificationBoard" />
+		<typeAlias type="com.jsp.dto.QualificationAttachVO"
+			alias="qualificationAttach" />
+		<typeAlias type="com.jsp.dto.MemberVO" alias="member" />
+		
+		
+		<typeAlias type="java.lang.String" alias="str" />
+		<typeAlias type="java.lang.Integer" alias="int" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driverClassName}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
+
+				<!-- pool setting -->
+				<property value="2" name="poolMaximumActiveConnections" />
+				<property value="2" name="poolMaximumIdleConnections" />
+
+			</dataSource>
+
+		</environment>
+
+	</environments><!-- 데이터소스/DBCP -->
+
+	<mappers>
+		<mapper
+			resource="com/jsp/mybatis/mappers/NotificationBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/NotificationAttach-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/WeeklyReportBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/WeeklyReportAttach-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/NoticeBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/NoticeBoardAttach-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/AnnouncementBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/AnnouncementBoardAttach-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/TeacherAffairsBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/TeacherAffairsAttach-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/NomalAffairsBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/NomalAffairsAttach-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/QualificationBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/QualificationAttach-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/AppointmentBoard-Mapper.xml" />
+		<mapper
+			resource="com/jsp/mybatis/mappers/AppointmentAttach-Mapper.xml" />
+			
+		<mapper resource="com/jsp/mybatis/mappers/Member-Mapper.xml" />
+
+		<!-- mapper.xml 경로 -->
+	</mappers>
+
+</configuration>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="NoticeBoardAttach-Mapper">
+	<select id="selectNoticeBoardAttachByNbno" resultType="noticeBoardAttach">
+		select * 
+		from noticeBoardAttach 
+		where nbno = #{nbno}
+	</select>	
+	
+	<select id="selectNoticeBoardAttachByNano" resultType="noticeBoardAttach">
+		select *
+		from noticeBoardAttach
+		where nano=#{nano}
+	</select>
+	
+	<update id="insertNoticeBoardAttach">
+		insert into 
+		noticeBoardAttach (nano, uploadpath, filename, filetype, nbno, attacher)
+		values (attach_seq.nextval, #{uploadPath}, #{fileName},#{fileType}, 
+				#{nbno},#{attacher} )
+	</update>
+	
+	<update id="deleteNoticeBoardAttach">
+		delete 
+		from noticeBoardAttach 
+		where nano = #{nano}
+	</update>
+	
+	<update id="deleteAllNoticeBoardAttach">
+		delete 
+		from noticeBoardAttach 
+		where nbno = #{nbno}
+	</update>
+</mapper>

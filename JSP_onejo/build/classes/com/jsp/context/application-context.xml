@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+
+
+	<!-- datasource -->
+	<bean id="sqlSessionFactory"
+		class="com.jsp.datasource.MySqlSessionFactory" />
+
+	<!-- Repository -->
+	<bean id="memberDAO" class="com.jsp.dao.MemberDAOImpl" />
+	<bean id="appointmentAttachDAO"
+		class="com.jsp.dao.AppointmentAttachDAOImpl" />
+	<bean id="appointmentBoardDAO"
+		class="com.jsp.dao.AppointmentBoardDAOImpl" />
+	<bean id="qualificationAttachDAO"
+		class="com.jsp.dao.QualificationAttachDAOImpl" />
+	<bean id="qualificationBoardDAO"
+		class="com.jsp.dao.QualificationBoardDAOImpl" />
+	<bean id="teacherAffairsBoardDAO"
+		class="com.jsp.dao.TeacherAffairsBoardDAOImpl" />
+	<bean id="teacherAffairsAttachDAO"
+		class="com.jsp.dao.TeacherAffairsAttachDAOImpl" />
+	<bean id="nomalAffairsBoardDAO"
+		class="com.jsp.dao.NomalAffairsBoardDAOImpl" />
+	<bean id="nomalAffairsAttachDAO"
+		class="com.jsp.dao.NomalAffairsAttachDAOImpl" />
+	<bean id="notificationAttachDAO"
+		class="com.jsp.dao.NotificationAttachDAOImpl" />
+	<bean id="notificationBoardDAO"
+		class="com.jsp.dao.NotificationBoardDAOImpl" />
+	<bean id="weeklyReportAttachDAO"
+		class="com.jsp.dao.WeeklyReportAttachDAOImpl" />
+	<bean id="weeklyReportBoardDAO"
+		class="com.jsp.dao.WeeklyReportBoardDAOImpl" />
+	<bean id="noticeBoardDAO" class="com.jsp.dao.NoticeBoardDAOImpl" />
+	<bean id="noticeBoardAttachDAO"
+		class="com.jsp.dao.NoticeBoardAttachDAOImpl" />
+	<bean id="announcementBoardDAO"
+		class="com.jsp.dao.AnnouncementBoardDAOImpl" />
+	<bean id="announcementBoardAttachDAO"
+		class="com.jsp.dao.AnnouncementBoardAttachDAOImpl" />
+
+
+	<!-- memberService start -->
+	<bean id="memberService" class="com.jsp.service.MemberServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="memberDAO" ref-value="memberDAO" />
+	</bean>
+	<!-- memberService end -->
+	<!-- TeacherAffairsService -->
+	<bean id="teacherAffairsBoardService"
+		class="com.jsp.service.TeacherAffairsBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="teacherAffairsBoardDAO"
+			ref-value="teacherAffairsBoardDAO" />
+		<property name="teacherAffairsAttachDAO"
+			ref-value="teacherAffairsAttachDAO" />
+	</bean>
+	<!-- NomalAffairsService -->
+	<bean id="nomalAffairsBoardService"
+		class="com.jsp.service.NomalAffairsBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="nomalAffairsBoardDAO"
+			ref-value="nomalAffairsBoardDAO" />
+		<property name="nomalAffairsAttachDAO"
+			ref-value="nomalAffairsAttachDAO" />
+	</bean>
+
+	<!-- appointmentBoardService start -->
+	<bean id="appointmentBoardService"
+		class="com.jsp.service.AppointmentBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="appointmentBoardDAO"
+			ref-value="appointmentBoardDAO" />
+		<property name="appointmentAttachDAO"
+			ref-value="appointmentAttachDAO" />
+	</bean>
+	<!-- notificationBoardService end -->
+
+
+
+	<!-- QualificationBoardService start -->
+	<bean id="qualificationBoardService"
+		class="com.jsp.service.QualificationBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="qualificationBoardDAO"
+			ref-value="qualificationBoardDAO" />
+		<property name="qualificationAttachDAO"
+			ref-value="qualificationAttachDAO" />
+	</bean>
+	<!-- qualificationBoardService end -->
+
+
+
+	<bean id="noticeBoardService"
+		class="com.jsp.service.NoticeBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="noticeBoardDAO" ref-value="noticeBoardDAO" />
+		<property name="noticeBoardAttachDAO"
+			ref-value="noticeBoardAttachDAO" />
+	</bean>
+
+	<bean id="announcementBoardService"
+		class="com.jsp.service.AnnouncementBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="announcementBoardAttachDAO"
+			ref-value="announcementBoardAttachDAO" />
+		<property name="announcementBoardDAO"
+			ref-value="announcementBoardDAO" />
+	</bean>
+	<!-- 추가끝 -->
+
+
+	<!-- notificationBoardService start -->
+	<bean id="notificationBoardService"
+		class="com.jsp.service.NotificationBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="notificationBoardDAO"
+			ref-value="notificationBoardDAO" />
+		<property name="notificationAttachDAO"
+			ref-value="notificationAttachDAO" />
+	</bean>
+	<!-- notificationBoardService end -->
+
+
+
+	<!-- weeklyReportBoardService start -->
+	<bean id="weeklyReportBoardService"
+		class="com.jsp.service.WeeklyReportBoardServiceImpl">
+		<property name="sqlSessionFactory"
+			ref-value="sqlSessionFactory" />
+		<property name="weeklyReportBoardDAO"
+			ref-value="weeklyReportBoardDAO" />
+		<property name="weeklyReportAttachDAO"
+			ref-value="weeklyReportAttachDAO" />
+	</bean>
+	<!-- weeklyReportBoardService end -->
+</beans>
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="NoticeBoard-Mapper">
+	<sql id="search">
+		<if test="searchType == 't'.toString()">
+			and title like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'w'.toString()">
+			and writer like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'c'.toString()">
+			and content like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'tc'.toString()">
+			and (
+			title like '%'||#{keyword}||'%'
+			or
+			content like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<if test="searchType == 'cw'.toString()">
+			and (
+			writer like '%'||#{keyword}||'%'
+			or
+			content like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<if test="searchType == 'tcw'.toString()">
+			and (
+			title like '%'||#{keyword}||'%'
+			or
+			writer like '%'||#{keyword}||'%'
+			or
+			content like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<!-- 부서 -->
+		<if test="searchType == 'd'.toString()">
+			and department like '%'||#{keyword}||'%'			
+		</if>
+		<!-- 부서,제목 -->
+		<if test="searchType == 'td'.toString()">
+			and (
+			title like '%'||#{keyword}||'%'
+			or
+			department like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<!-- 부서,작성자 -->
+		<if test="searchType == 'wd'.toString()">
+			and (
+			writer like '%'||#{keyword}||'%'
+			or
+			department like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<!-- 부서,본문 -->
+		<if test="searchType == 'cd'.toString()">
+			and (
+			content like '%'||#{keyword}||'%'
+			or
+			department like '%'||#{keyword}||'%'						
+			)			
+		</if>
+	</sql>
+	
+	<select id="selectSearchNoticeBoardList" resultType="noticeBoard">
+		select *
+		from noticeBoard
+		where nbno is not null  			  	
+		<include refid="search" />
+		order by nbno desc
+	</select>
+	
+	<select id="selectSearchNoticeBoardListCount"  resultType="int">
+		select count(*)
+		from noticeBoard
+		where nbno is not null  			  	
+		<include refid="search" />
+		order by nbno desc
+	</select>
+	
+	<update id="insertNoticeBoard">
+		insert 
+		into noticeBoard(nbno,title,writer,content,department)
+		values (#{nbno},#{title},#{writer},#{content},#{department})
+	</update>
+	
+	<select id="selectNoticeBoardSeqNext" resultType="int">
+		select noticeBoard_seq.nextval as nbno from dual
+	</select>
+	
+	<select id="selectNoticeBoardByNbno"  resultType="noticeBoard">
+		select *  
+		from noticeBoard 
+		where nbno=#{nbno}
+	</select>
+	
+	<update id="increaseViewCnt" parameterType="int">
+		update 
+		noticeBoard 
+		set viewcnt=viewcnt+1 
+		where nbno=#{nbno}
+	</update>
+	
+	<update id="updateNoticeBoard" parameterType="noticeBoard">
+		update 
+		noticeBoard
+		set title=#{title}, content=#{content}, department=#{department}, updatedate=sysdate 
+		where nbno=#{nbno}
+	</update>
+	
+	<update id="deleteNoticeBoard" parameterType="int">
+		delete 
+		from noticeBoard
+		where nbno=#{nbno}
+	</update>
+</mapper>
+
+
+
+
+
+
+

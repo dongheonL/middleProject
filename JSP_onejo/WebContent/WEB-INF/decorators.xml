@@ -1,0 +1,29 @@
+<decorators defaultdir="/WEB-INF/decorator">
+
+	<decorator name="open" page="open_decorator.jsp">
+		<pattern>/common/*.do</pattern>
+	</decorator>
+<!-- 	<decorator name="open" page="open_decorator.jsp"> -->
+<!-- 		<pattern>/board/*/regist.do</pattern> -->
+<!-- 		<pattern>/board/*/detail.do</pattern> -->
+<!-- 		<pattern>/board/*/modify.do</pattern> -->
+		
+<!-- 	</decorator> -->
+	
+	<decorator name="board" page="decorator.jsp">
+		<pattern>/board/*/*.do</pattern>	
+	</decorator>
+	
+	
+<!-- 	/board/detail/*.do -->
+
+
+	<!-- <decorator name="openWindow" page="open_decorator.jsp"> -->
+	<!-- <pattern>/**/*.do</pattern> -->
+	<!-- <pattern>/main.do</pattern> -->
+	<!-- </decorator> -->
+
+	<excludes>
+		<pattern>/resources/*</pattern>
+	</excludes>
+</decorators>

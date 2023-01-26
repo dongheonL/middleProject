@@ -1,0 +1,652 @@
+@charset "utf-8";
+
+/* 공지사항_상단박스 */
+.noti_txt { border:1px solid #b9cbd8; padding:15px 20px 15px 80px; background:#f1f4f9 url(/JSP_onejo/resources/images/template/00001/sub/ico_noti.png) no-repeat 20px 50%; overflow:hidden; margin-bottom:20px}
+
+/* 자료관리_공통 */
+.databox { border:2px dashed #d6dbe2; padding:10px 20px; margin-top:80px; display:block; overflow:hidden}
+.databox dt {font-family:"NotoM"; font-size:16px; color:#222; margin-bottom:5px}
+.databox dd {font-family:"NotoR"; font-size:15px; color:#333; margin-bottom:2px}
+.databox dd:last-child { color:#fe5400 !important}
+
+/********* 01_전자민원 **********/
+
+/********* 02_참여마당 **********/
+/* 부조리공익신고 */
+.report { overflow:hidden}
+.report dl {width:50%; float:left; margin-bottom:10px}
+.report dt { width:240px; float:left; margin-right:5px}
+.report dd {font-family:"NotoR"; font-size:15px; letter-spacing:-1px; color:#111; margin:12px 0 5px }
+.report dd span { display:block; text-decoration:underline; font-size:12px;}
+
+/* 위센터-센터소개 */
+.wee_logo { width:139px; height:139px; float:left; margin-right:25px}
+.wee_slogan img { width:491px; height:101px; display:inline-block; /**display:inline; zoom:1*/}
+.center_info { border:1px solid #a6add2; border-radius:5px; background:#f7faff}
+.center_info .cen_img {background:url(/images/template/00001/sub/wee_bg.png) no-repeat 100% 50%; padding:50px 30px }
+.center_info ul { padding-right:350px}
+
+/* 위센터-이용안내 */
+.wee_guide {background-color:#e7f8fe; border:1px solid #a0d3f2; border-bottom-color:#43aae9; border-radius:7px; padding:25px 30px; margin-bottom:15px;}
+.wee_guide dl {background:url(/images/template/00001/sub/wee_bg2.png) no-repeat 100% 90%}
+.wee_guide dt { font-family:"NotoM"; font-size:15px; letter-spacing:-1px; color:#111;}
+.wee_guide dd {font-family:"NotoR"; font-size:13px; letter-spacing:-1px; line-height:28px; color:#111; margin-bottom:15px; background:url(/images/template/00001/sub/bul2.png) no-repeat 0 11px; padding-left:8px}
+.wee_guide dd:last-child { margin-bottom:0}
+
+/* 위센터-자료실*/
+.wee_link { width:492px; margin:0 auto; overflow:hidden}
+.wee_link li { width:242px; height:210px; border-radius:5px; float:left; text-align:left}
+.wee_link li a {height:180px; display:block; padding:30px 0 0 20px}
+.wee_link li a h2 {font-family:"NotoM"; font-size:18px; letter-spacing:-1px; color:#fff; margin-bottom:5px}
+.wee_link li a p {font-family:"NotoR"; font-size:13px; letter-spacing:-1px; color:#fff; opacity:0.8}
+.wee_link li.w_link1 {background-color:#637187}
+.wee_link li.w_link1 a {background:url(/images/template/00001/sub/w_ico1.png) no-repeat 90% 90% }
+.wee_link li.w_link2 {background-color:#5f85bf}
+.wee_link li.w_link2 a {background:url(/images/template/00001/sub/w_ico2.png) no-repeat 90% 90% }
+.wee_link li.w_link3 {background-color:#00b864}
+.wee_link li.w_link3 a {background:url(/images/template/00001/sub/w_ico3.png) no-repeat 90% 90% }
+.wee_link li.w_link4 {background-color:#2b415a}
+.wee_link li.w_link4 a {background:url(/images/template/00001/sub/w_ico4.png) no-repeat 90% 90% }
+.wee_link li.w_link1, .wee_link li.w_link2 { margin-bottom:8px}
+.wee_link li.w_link2, .wee_link li.w_link4 { margin-left:8px} 
+.wee_link li a:hover h2 { text-decoration:underline}
+
+/* 학습종합클리닉센터 190315 */
+.educenter { background:#fff; border:1px solid #e5e5e5; border-bottom-color:#c4c4c4; padding:5px 30px 20px; margin-bottom:15px;}
+.edu_bg {background: #fff url(/images/dje/sub/2019/educenter_4.jpg) no-repeat right 20px;}
+.educenter p.tit {margin:20px 0 5px; font-family:"NotoM"; font-size:15px; letter-spacing:-1px; color:#111;}
+.educenter p.con {font-family:"NotoR"; font-size:13px; letter-spacing:-1px; line-height:25px; color:#111; background:url(/images/template/00001/sub/bul2.png) no-repeat 0 11px; padding-left:10px}
+.educenter ul.con>li {font-family:"NotoR"; font-size:13px; letter-spacing:-1px; line-height:25px; color:#111; background:url(/images/template/00001/sub/bul2.png) no-repeat 0 11px; padding-left:10px}
+.educenter p.img_1{text-align:center;}
+.educenter p.img_1 img{width:100%; max-width:700px;}
+.educenter p.img_2{text-align:left;} /*190319 수정*/
+.educenter p.img_2 img{width:100%; max-width:400px;} /*190319 수정*/
+
+/********* 03_정보마당 **********/
+/* 학교운영위원회 */
+.step1 { background:#f4fdff; border:1px solid #b2c8cd; border-radius:5px; overflow:hidden; text-align:center}
+.step1 li { float:left; font-family:"NotoR"; font-size:13px; letter-spacing:-1px; color:#111; background:url('/images/template/00001/sub/step_arrow.png') no-repeat 100% 50%; padding:10px 24px 10px 14px }
+.adv_step{ position:relative; }
+.adv_step>ul>li>h3{ font-size:16px; letter-spacing:-1px; color:#3d70cb; margin-bottom:5px}
+.adv_step>ul>li{ border-top:1px dashed #ccc; padding:15px 20px 0 150px; box-sizing:border-box; margin-top:20px; }
+.adv_step>ul>li:first-child{ margin-top:0; border-top:0}
+.adv_step>ul>li:before{content:""; display:block; width:22px; height:14px; background:url("/images/template/00001/sub/step_arr.png") no-repeat 0 0;}
+.adv_step>ul>li:first-child:before{ background:none; height:0; width:0;}
+.adv_step>ul>li.adv_step01{ background:url(/images/template/00001/sub/ad_st01.png) no-repeat 30px 30px;}
+.adv_step>ul>li.adv_step02{ background:url(/images/template/00001/sub/ad_st02.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step03{ background:url(/images/template/00001/sub/ad_st03.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step04{ background:url(/images/template/00001/sub/ad_st04.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step05{ background:url(/images/template/00001/sub/ad_st05.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step06{ background:url(/images/template/00001/sub/ad_st06.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step07{ background:url(/images/template/00001/sub/ad_st07.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step08{ background:url(/images/template/00001/sub/ad_st08.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step09{ background:url(/images/template/00001/sub/ad_st09.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step10{ background:url(/images/template/00001/sub/ad_st10.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step11{ background:url(/images/template/00001/sub/ad_st11.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step12{ background:url(/images/template/00001/sub/ad_st12.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step13{ background:url(/images/template/00001/sub/ad_st13.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step14{ background:url(/images/template/00001/sub/ad_st14.png) no-repeat 30px 40px;}
+.adv_step>ul>li.adv_step15{ background:url(/images/template/00001/sub/ad_st15.png) no-repeat 30px 40px;}
+
+/* 시험정보 */
+.search_Ty { width:320px; margin:0 auto; letter-spacing:-1px; color:#111; text-align:left}
+.search_Ty dt, .search_Ty dd {display:inline-block; /**display:inline; zoom:1*/; vertical-align:middle; font-size:13px; line-height:28px}
+.search_Ty dt { width:70px; font-family:"NotoM"; background:url(/images/template/00001/sub/bul1.png) no-repeat 0 10px; padding-left:10px}
+.search_Ty dd { font-family:"NotoR"} 
+.search_Ty dd > input { border:1px solid #666}
+.search_Ty.s_wid { width:350px}
+.search_Ty.s_wid dt { width:120px !important}
+
+/* 대전행복교육장학재단 */
+.sch_bg { background:url(/images/template/00001/sub/sch_img.png) no-repeat 100% 50%}
+
+/* 이중한장학회 */
+.lee_sch { background:url(/images/template/00001/sub/lee.jpg) no-repeat 20px 50px; overflow:hidden}
+.lee_sch > ul { padding:10px 0 0 120px}
+.lee_sch > ul > li { width:48%; float:left}
+.lee_sch > ul > li strong { color:#1c51b0; font-size:15px}
+
+/********* 04_홍보마당 **********/
+
+/********* 05_교육청소개 **********/
+/* 교육감인사말 */
+.greeting {width:100%; color:#111; font-family:'NotoR'; overflow:hidden; background:url(/images/template/00001/sub/greeting.jpg) no-repeat 100% 10px; padding-bottom:30px}
+.greeting p { line-height:40px; letter-spacing:-1px;}
+.greeting p.gre_t1 {font-size:30px; font-family:'NotoM'; color:#0e4291; background:url(/images/template/00001/sub/gre_t.gif) no-repeat 0 0; padding-top:10px;}
+.greeting p.gre_t2 {font-size:18px}
+.greeting p.gre_t3 {font-size:22px; line-height:28px; margin-top:20px}
+.greeting p.gre_t3 .gre_c1 { color:#ff8b10}
+.greeting p.gre_t3 .gre_c2 { color:#5f85bf}
+.greeting p.gre_t3 .gre_c3 { color:#00b864}
+
+.greeting div.gre_txt { margin-top:10px}
+.greeting div.gre_txt p { line-height:24px; margin-top:30px; font-size:15px}
+.greeting div.gre_txt p:last-child { font-size:18px; font-family:'NotoM'}
+.greeting div.gre_txt p span.gret_c1 { font-family:'NotoM'; color:#636dac}
+.greeting div.gre_txt p span.gret_c2 { font-family:'NotoM'; color:#3d70cb}
+
+/* 교육감프로필 */
+.profile { background:url('/images/template/00001/sub/prof_bg.jpg') no-repeat right 0; font-family:"NotoR"; letter-spacing:-1px; overflow:hidden}
+.profile .pro_photo { position:relative; width:380px; height:576px; float:left; background:url('/images/template/00001/sub/prof.jpg') no-repeat}
+.profile .pro_photo dl { width:260px; font-size:18px; line-height:40px; margin:390px auto 0; overflow:hidden}
+.profile .pro_photo dt { display:inline-block; /**display:inline; zoom:1*/; color:#00a1e2; margin-right:10px; float:left}
+.profile .pro_photo dd { display:block; color:#fff}
+.profile .pro_info { overflow:hidden; padding-left:30px}
+.profile .pro_info h2 {font-family:"NotoM"; font-size:16px; color:#007cc9; margin-bottom:5px}
+
+/* 역대교육감 */
+.super_tit{ background:#ece9e4 url('/images/template/00001/sub/super_tit_bg.jpg') no-repeat 0 0; height:100px; text-align:center; letter-spacing:-1px }
+.super_tit .txt1{ font-size:26px; color:#fff; padding-top:25px; font-family:"NotoM"; }
+.super_tit .txt1_1{ font-size:26px; color:#fff; padding-top:35px; font-family:"NotoM"; }
+.super_tit .txt2{ font-size:14px; color:#e4efff; padding-top:10px; font-family:"NotoR"; }
+.super_list{ border-bottom:2px solid #333; position:relative; padding:50px 30px 40px 120px; min-height:160px; font-family:"NotoM"; letter-spacing:-1px; background:url('/images/template/00001/sub/super1.jpg') no-repeat 98% bottom}
+.super_list .mark{ position:absolute; top:30px; left:10px; background:url('/images/template/00001/sub/super_mark.gif') no-repeat 0 0; width:100px; height:60px; padding-top:40px; text-align:center; font-size:20px; color:#fff;font-family:"NotoR"; }
+.super_list .txt1{ font-size:16px; color:#0072bb; }
+.super_list .txt2{ font-size:24px; color:#333333; padding-top:10px; }
+
+.sup_list { width:357px; height:240px; float:left; margin-top:50px; padding-left:100px}
+.sup_list p {font-family:"NotoM"; letter-spacing:-1px}
+.sup_list p.txt1{ font-size:14px; color:#0072bb;  }
+.sup_list p.txt2{ font-size:18px; color:#333333; padding-top:10px; }
+.sup_list.bg2 { background:url('/images/template/00001/sub/super2.jpg') no-repeat 0 0}
+.sup_list.bg3 { background:url('/images/template/00001/sub/super3.jpg') no-repeat 0 0}
+.sup_list.bg4 { background:url('/images/template/00001/sub/super4.jpg') no-repeat 0 0}
+.sup_list.bg5 { background:url('/images/template/00001/sub/super5.jpg') no-repeat 0 0}
+
+/* 교육청연혁 */
+.history_tit { position:relative; height:120px; padding-left:530px; background:url('/images/template/00001/sub/hisbg.jpg') no-repeat}
+.history_tit p { height:58px; font-family:"NotoR"; font-size:14px; line-height:25px; letter-spacing:-1px; color:#fff;  background:url('/images/template/00001/sub/his_icon.png') no-repeat 0 30px; padding:30px 0 0 90px}
+.history_tit p strong {font-size:22px; font-weight:normal}
+.hs_tit { height:39px; line-height:39px; font-size:16px; border-top:1px solid #354353; border-bottom:1px solid #e6e6e6; background:url('/images/template/00001/sub/his_ico.gif') no-repeat; margin-top:30px; padding-left:35px}
+.his_list { margin:15px 0 0 30px}
+.his_list li {font-family:"NotoR"; font-size:15px; line-height:25px; letter-spacing:-1px; color:#222; background:url('/images/template/00001/sub/his_dot.gif') no-repeat 0 12px; padding-left:8px}
+.his_list span {font-family:"NotoM"; background:url(/images/template/00001/sub/his_bar.gif) no-repeat right 4px; margin-right:10px ; padding-right:15px}
+
+/* 주요업무계획 */
+.plan_box { position:relative; text-align:center; border:1px solid #b2becc}
+.plan_box a { position:absolute; top:30px; right:15px}
+h2.plantit { position:relative; width:600px; height:70px; margin:50px auto 30px; font-family:"NotoM"; font-size:24px; line-height:60px; letter-spacing:-2px; color:#222; text-align:center }
+h2.plantit:before { position:absolute; left:0; top:0; width:30px; height:60px; border:5px solid #0d5db7;  border-right:0; content:''}
+h2.plantit:after { position:absolute; right:0; top:0; width:30px; height:60px; border:5px solid #0d5db7;  border-left:0; content:''}
+.paln_list { overflow:hidden}
+.paln_list li { margin-bottom:20px; width:48.5%; min-height:200px; float:left}
+.paln_list li:nth-child(even) { margin-left:3%}
+.paln_list li span {position:relative; display:block; margin-bottom:10px; padding:0 0 0 60px; background-color:#2b415a; border-radius:7px; overflow:hidden; text-align:left; font-family:"NotoR"; color:#fff; font-size:16px; line-height:45px}
+.paln_list li span strong{position:absolute; top:0; left:0; width:45px; height:45px; background-color:#20a4f4; border-radius:7px; text-align:center}
+.paln_list li ul > li { width:100%; margin-bottom:0; min-height:0}
+.paln_list li ul > li:nth-child(even) { margin-left:0}
+
+/* 대전교육기본방향 */
+/*
+.basic_edu { width:445px; height:128px; float:left; background-color:#f1f4f9; border:1px solid #e5e5e5; border-bottom-color:#c4c4c4; border-radius:7px; color:#666; overflow:hidden; text-align:center}
+.basic_edu h2 { margin:25px 0 10px}
+.basic_edu p {font-family:"NotoM"; font-size:18px; line-height:24px; letter-spacing:-1px; color:#333; word-break:keep-all}
+.basic_edu.mg { margin-left:21px}
+*/
+.basic_edu  { overflow:hidden; margin-bottom:30px}
+.basic_edu h2 {font-family:"NotoM"; font-size:18px; line-height:24px; letter-spacing:-1px; color:#222; width:100px; float:left}
+.basic_edu div {background:url('/images/template/00001/sub/vision_dd.gif') repeat-y 0 0; padding-left:20px; float:left}
+.basic_edu div p {font-family:"NotoR"; font-size:13px; line-height:20px; letter-spacing:-1px; color:#333; word-break:keep-all; margin:5px 0}
+.basic_edu div p.edu_tit {font-family:"NotoM"; font-size:24px; line-height:40px; color:#3d70cb}
+.basic_edu div p.edu_txt {font-family:"NotoM"; font-size:18px; line-height:30px; color:#2b415a; margin-top:20px}
+.basic_edu div p.edu_txt:first-child { margin-top:0}
+.basic_edu div p.edu_txt span { width:80px; display:inline-block; /**display:inline; zoom:1*/; text-align:center; background:#ff8b10; border-radius:15px; font-family:"NotoR"; font-size:13px; color:#fff; margin-right:10px}
+
+
+/* 조직도 171019 */
+.org{ position:relative; overflow:hidden; font-family:"NotoM"; text-align:center; background:url('/images/template/00001/sub/org_line_pc_2019.png') no-repeat 50% 80px; letter-spacing:-1px}/* 190102 */
+.org_super a{ width:140px; height:40px; line-height:40px; display:block; font-size:20px; color:#fff !important; padding-top:40px; background:url('/images/template/00001/sub/org_super.png') no-repeat 0 bottom; margin:0 auto; }/* 171023 수정 */
+.org_super2 a{ width:140px; height:40px; line-height:40px; display:block; font-size:20px; color:#fff !important; padding-top:40px; background:url('/images/template/00001/sub/org_super2.png') no-repeat 0 bottom; margin:40px auto 0 auto}/* 171023 수정 */
+.org_group1{ width:190px; position:absolute; top:138px; right:1.6%; } /* 190102 */
+.org_group1 .tit{ height:40px; background:url('/images/template/00001/sub/org_group1.png') no-repeat 50% 0; position:relative; }
+.org_group1 .tit a{font-size:16px;color:#fff;display:block;padding-top: 8px;}/* 200610 */
+.org_group1 ul{ border:1px solid #ddd; background:#f8f8f8; border-radius:5px; margin-top:-20px; padding:30px 5px 10px; } /* 190102 */
+.org_group1 ul li{ border:1px solid #ddd; background:#fff; margin-bottom:1px; padding:3px; font-size:13px; font-family:"NotoR"}
+
+/* 171121 수정*/
+.org_group1_1{ width:190px; position:absolute; top:300px; left:0; }
+.org_group1_2{ width:190px; position:absolute; top:300px; right:1.6%; } /* 190102 */
+.org_group1_1 .tit, .org_group1_2 .tit{ height:40px; background:url('/images/template/00001/sub/org_group1.png') no-repeat 50% 0; position:relative; }
+.org_group1_1 .tit a, .org_group1_2 .tit a{font-size:16px;color:#fff;display:block;padding-top: 9px;}/* 200610 */
+.org_group1_1 ul, .org_group1_2 ul{ border:1px solid #ddd; background:#f8f8f8; border-radius:5px; margin-top:-20px; padding:30px 5px 10px; } /* 190102 */
+.org_group1_1 ul li, .org_group1_2 ul li{ border:1px solid #ddd; background:#fff; margin-bottom:1px; padding:3px; font-size:13px; font-family:"NotoR"}
+
+.org_group1_1 {}
+
+
+.org_group2.fl,
+.org_group2.fr,
+.org_group3.fl,
+.org_group3.fr{ float:left; width:50%; }
+.org_group2{ margin-top:200px; height:190px; }/* 171020 수정 */
+.org_group2 .tit{ width:190px; height:40px; background:url('/images/template/00001/sub/org_group2.png') no-repeat 50% 0; position:relative; margin:0 auto; }
+.org_group2 .tit a{ font-size:16px; color:#fff; display:block; padding-top:11px; }
+.org_group2 ul{ width:168px; border:1px solid #ddd; background:#f8f8f8; border-radius:5px; padding:30px 10px 10px 10px; margin:-20px auto 0 auto; }
+.org_group2 ul li{ border:1px solid #ddd; background:#fff; margin-bottom:1px; padding:3px; font-size:13px; font-family:"NotoR"}
+.org_group3{ margin-top:50px;}/* 171020 수정 */
+.g3mgt { margin-top:320px;}/* 171121 수정 */
+.org_group3 .tit{ width:360px; height:31px; background:url('/images/template/00001/sub/org_group3.png') no-repeat 50% 0; position:relative; margin:0 auto; font-size:16px; color:#fff; display:block; padding-top:11px; }
+.org_group3 .tit2{ width:360px; height:31px; line-height:18px; background:url('/images/template/00001/sub/org_group3_2.png') no-repeat 50% 0; position:relative; margin:0 auto; font-size:16px; color:#fff; display:block; padding:11px 0 0; }/* 171023 수정 */
+.org_group3 .cont, .org_group3 .cont2{ width:338px; border:1px solid #ddd; background:#f8f8f8; border-radius:5px; padding:30px 10px 10px 10px; margin:-20px auto 0 auto; overflow:hidden; }
+.org_group3 .cont dl{ float:left; width:48%; margin:1%; }
+.org_group3 .cont2 dl{ float:left; width:98%; margin:1%; }/* 171020 수정 */
+.org_group3 .cont dt a, .org_group3 .cont2 dt a{ background:#637187; color:#fff; font-size:14px; display:block; padding:3px; }
+.org_group3 .cont dd ul li, .org_group3 .cont2 dd ul li{ border:1px solid #ddd; background:#fff; margin-bottom:1px; padding:3px; font-size:13px; font-family:"NotoR"}/* 171020 수정 */
+.cont_none {height:20px;font-size:0;text-indent:-10000px;border: 1px solid #f8f8f8!important;background: #f8f8f8!important;}/*201020 빈칸 수정*/
+
+/* 180110 추가 */
+li.org_group_gray {color:#fff !important; font-size:13px; padding:3px; border:1px solid #637187 !important; background:#637187 !important;}/* 180110 추가 */
+p.org_txt_line {margin:0 15px; border-top:1px dotted #b2b7c7;}/* 180110 추가 */
+
+/* 조직도 190102 추가 */
+.org_group4.fl,
+.org_group4.fr{ float:left; width:30%; margin:320px 1.6% 0;}
+.org_group4 .tit{width:100%;height:31px;background:url('/images/template/00001/sub/org_group3.png') no-repeat 50% 0;position:relative;margin:0 auto;font-size:16px;color:#fff;display:block;padding-top: 9px;}/* 200610 */
+.org_group4 .cont, .org_group4 .cont2{ width:100%; border:1px solid #ddd; background:#f8f8f8; border-radius:5px; padding:30px 0 10px; margin:-20px auto 0 auto; overflow:hidden; }
+.org_group4 .cont dl{ float:left; width:46%; margin:2%;}
+.org_group4 .cont dt a, .org_group4 .cont2 dt a{ background:#637187; color:#fff; font-size:14px; display:block; padding:3px;}
+.org_group4 .cont dd ul li, .org_group4 .cont2 dd ul li{ border:1px solid #ddd; background:#fff; margin-bottom:1px; font-size:13px; font-family:"NotoR"; padding:3px;}
+.org_group5.fl,
+.org_group5.fr{ float:left; width:46%; margin:80px 1.6%;}
+.org_group5 .tit2{ width:100%; height:31px; line-height:18px; background:url('/images/template/00001/sub/org_group3_2.png') no-repeat 50% 0; position:relative; margin:0 auto; font-size:16px; color:#fff; display:block; padding:11px 0 0; }/* 171023 수정 */
+.org_group5 .cont, .org_group5 .cont2{ width:100%; border:1px solid #ddd; background:#f8f8f8; border-radius:5px; padding:30px 5px 10px; margin:-20px auto 0 auto; overflow:hidden; }
+.org_group5 .cont dt a{ background:#637187; color:#fff; font-size:14px; display:block; padding:3px; }
+.org_group5 .cont dd ul li{ border:1px solid #ddd; background:#fff; margin-bottom:1px; padding:3px; font-size:13px; font-family:"NotoR"}
+
+/* 조직도 190318 추가 */
+.org_group4 .cont li.addmenu{font-size:12px; background:#ffffff}
+
+/* 전화번호주소 */
+.bgi1 { background:url(/images/template/00001/sub/bgi1.png) no-repeat 98% 50%; padding:5px 0 !important}
+.input_search { width:250px; border:1px solid #ccc !important; font-size:12px}
+.ul_2 { overflow:hidden}
+.ul_2 li { width:48.5%; float:left; margin:5px 0 !important}
+.tabTy1{ overflow:hidden; }
+.tabTy1 li{ width:25%; float:left; }
+.tabTy1 li a{ display:block; border:1px solid #ccc; margin:5px 5px 0 0; background:url('/images/template/00001/sub/tabTy1.png') no-repeat 94% center; padding:8px 10px; border-radius:3px; font-size:13px; font-family:"NotoR"; color:#555; }
+.tabTy1 li.on a{ border-color:#2b415a; font-weight:bold; letter-spacing:-1px; background:#114770 url('/images/template/00001/sub/tabTy1_on.png') no-repeat 94% center; color:#fff; }
+
+/* 전화번호주소-교육기관 */
+.sch_map_top {background-color:#fff;  border:2px solid #ccc; border-radius:7px; padding:15px 20px; margin-bottom:25px; overflow:hidden}
+.left_area { width:459px; float:left}
+.right_area { width:390px; float:right}
+/* 테이블 */
+.Ins_tb{position:relative; overflow:hidden; border-radius:5px 5px 0 0; color:#4c4d4f !important; font-size:12px; font-family:'NotoR';}
+.Ins_tb table{ width:100%; margin-left:-1px}
+.Ins_tb thead th { border-bottom:1px solid #1b3958; padding:8px; background:#516f8d; font-family:'NotoRbold'; font-size:13px !important; color:#fff}
+.Ins_tb tbody th { border-bottom:1px solid #acc3d3; padding:8px; background:#e0e5eb; font-family:'NotoRbold'; font-size:12px !important; color:#222}
+.Ins_tb td {padding:8px; border-bottom:1px solid #acc3d3; line-height:18px; font-size:12px !important; color:#222; text-align:center; background:#fff}
+/* 검색 */
+.search_Ty2 {width:100%; letter-spacing:-1px; color:#111; text-align:left;}
+.search_Ty2 dl {margin-bottom:7px; overflow:hidden}
+.search_Ty2 dl dt, .search_Ty dl dd {display:inline-block; /**display:inline; zoom:1*/; vertical-align:middle; font-size:13px; line-height:28px}
+.search_Ty2 dl dt { width:60px; font-family:"NotoM"; background:url(/images/template/00001/sub/bul1.png) no-repeat 0 10px; padding-left:10px; float:left}
+.search_Ty2 dl dd { font-family:"NotoR"; margin-left:60px} 
+.search_Ty2 dl dd > input, .search_Ty2 dl dd > select { width:170px !important; border:1px solid #999; font-size:12px }
+
+.search_Ty3 {width:100%; letter-spacing:-1px; color:#111; text-align:left;}
+.search_Ty3 dl {margin-bottom:7px; overflow:hidden}
+.search_Ty3 dl dt, .search_Ty dl dd {display:inline-block; /**display:inline; zoom:1*/; vertical-align:middle; font-size:13px; line-height:28px}
+.search_Ty3 dl dt { width:100px; font-family:"NotoM"; background:url(/images/template/00001/sub/bul1.png) no-repeat 0 10px; padding-left:10px; float:left}
+.search_Ty3 dl dd { font-family:"NotoR"; margin-left:60px} 
+.search_Ty3 dl dd > input, .search_Ty2 dl dd > select { width:170px !important; border:1px solid #999; font-size:12px }
+
+
+/* 찾아오시는길 */
+.map{ display:block; height:450px; border:1px solid #ccc; }
+.map_box {background:url('/images/template/00001/sub/map_ico.png') no-repeat 20px 50% #f9fbfd; border:1px solid #1d59c5; padding:20px 20px 20px 120px; margin:30px 0 30px; overflow:hidden}
+
+/* 시교육청CI */
+.ci_download { text-align:center; margin-bottom:30px}
+.ci_download a { border:1px solid #9a9a9a; padding:10px 20px 10px 50px; font-family:"NotoR"; font-size:13px; letter-spacing:-1px; color:#222; text-align:left}
+.ci_download a:hover { text-decoration:underline}
+.ci_download a.btn_ci1 { background:url('/images/template/00001/sub/ci_ico1.png') no-repeat 20px 50%}
+.ci_download a.btn_ci2 { background:url('/images/template/00001/sub/ci_ico2.png') no-repeat 20px 50%}
+.ci_download a.btn_ci3 { background:url('/images/template/00001/sub/ci_ico3.png') no-repeat 20px 50%}
+.ci1, .ci2, .ci3, .ci4, .ci5 {overflow:hidden; height:100%; min-height:170px}
+.ci1 p, .ci2 p, .ci3 p, .ci4 p, .ci5 p {padding-left:250px}
+.ci1 { background:url('/images/template/00001/sub/ci1.png') no-repeat }
+.ci2 { background:url('/images/template/00001/sub/ci2.png') no-repeat }
+.ci3 { background:url('/images/template/00001/sub/ci3.png') no-repeat }
+.ci4 { background:url('/images/template/00001/sub/ci4.png') no-repeat }
+.ci5 { background:url('/images/template/00001/sub/ci5.png') no-repeat }
+.ci6 { background:url('/images/template/00001/sub/ci6.png') no-repeat 50% 0; padding-top:130px !important}
+.ci7 { background:url('/images/template/00001/sub/ci7.png') no-repeat 50% 0; padding-top:150px !important}
+
+/* 파워브랜드활용매뉴얼 */
+.educore { background:url('/images/template/00001/sub/educore.png') no-repeat 0 0; padding:0 0 5px 100px}
+.gridbox { background:url('/images/template/00001/sub/grid.gif') repeat; padding:30px 20px; border:1px solid #e5e5e5; border-bottom-color:#c4c4c4; border-radius:7px; overflow:hidden}
+.gridbox p { position:relative; width:33.3%; height:124px; float:left; padding-top:50px}
+.gridbox p span { position:absolute; top:0; left:0; font-family:"NotoR"; font-size:13px; letter-spacing:-1px; color:#fff; background:#5f85bf; padding:5px 15px; border-radius:3px}
+.gridbox p.edc1 {background:url('/images/template/00001/sub/educore_logo.png') no-repeat 0 40px}
+.gridbox p.edc2 {background:url('/images/template/00001/sub/educore_a.png') no-repeat 0 40px}
+.gridbox p.edc3 {background:url('/images/template/00001/sub/educore_b.png') no-repeat 0 40px}
+
+
+/********* 06_정보공개 **********/
+
+
+/********* 07_홈페이지가이드 **********/
+/* 로그인 */
+.login_ipin { position:relative;/* 161229 추가*/ width:564px; text-align:center; overflow:hidden; margin:40px auto}
+.login_ipin div {width:215px; height:241px; float:left; background:#fff; border:1px solid #bec6d3; border-radius:15px; padding:21px 30px 29px}
+.login_ipin div p { height:70px; font-family:"NotoR"; font-size:13px; letter-spacing:-1px; color:#272727; line-height:21px; margin-top:10px}
+.login_ipin div a { display:block; background:#2b415a; border-radius:5px; padding:15px 25px; font-family:"NotoR"; font-size:16px; letter-spacing:-1px; color:#fff; margin-top:10px}
+.login_ipin div a.w50 { width:105px; padding:15px 0; float:left}/* 170523 */
+.login_ipin div.box2 { margin-left:10px}
+.login_ipin div:hover { border-color:#009fff}	
+.login_ipin div a:hover { background-color:#445c78}
+.cer { position:absolute; top:10px; right:10px} /* 161229 추가 */
+
+/* 저작권신고서비스 */
+.copyright_box { border:3px solid #ffc75a; padding:15px 20px 15px 80px; background:url(/images/template/00001/sub/copy_ico.png) no-repeat 10px 15px; overflow:hidden; margin-bottom:20px}
+.copyright_box h6 {font-family:"NotoR"; font-size:22px; letter-spacing:-1px; color:#272727; line-height:25px}
+
+/* 뷰어다운로드 */
+.viewer_program{ overflow:hidden; padding-bottom:10px; }
+.viewer_program li{ float:left; width:50%; }
+.viewer_program li a:hover dl{ border-color:#0066cc; }
+.viewer_program li dl{ padding:20px 20px 20px 80px; border:1px solid #ccc; margin:10px 0 0 10px; border-radius:5px; box-shadow:0 3px 0 #f1f1f1;}
+.viewer_program li dl dt{ color:#333; font-family:"NotoM"; font-size:14px }
+.viewer_program li dl dd{ color:#333; font-family:"NotoR"; font-size:13px }
+.viewer_program li.viewer_1 dl{ background:url('/images/template/00001/sub/viewerIcon1.png') no-repeat 15px 50%; }
+.viewer_program li.viewer_2 dl{ background:url('/images/template/00001/sub/viewerIcon2.png') no-repeat 15px 50%; }
+.viewer_program li.viewer_3 dl{ background:url('/images/template/00001/sub/viewerIcon3.png') no-repeat 15px 50%; }
+.viewer_program li.viewer_4 dl{ background:url('/images/template/00001/sub/viewerIcon4.png') no-repeat 15px 50%; }
+.viewer_program li.viewer_5 dl{ background:url('/images/template/00001/sub/viewerIcon5.png') no-repeat 15px 50%; }
+.viewer_program li.viewer_6 dl{ background:url('/images/template/00001/sub/viewerIcon6.png') no-repeat 15px 50%; }
+
+/* 사이트맵 */
+.sitemap h3{ font-family:"NotoM"; font-size:24px; padding:0 0 10px 0; }
+.sitemap > ul{ overflow:hidden; border-style:solid; border-width:2px 1px 1px 1px; border-color:#445d6f #c2ced7 #c2ced7 #c2ced7; padding:10px 10px 10px 20px; background:#fff; }
+.sitemap > ul > li{ float:left; width:33.3%; margin-bottom:10px; }
+.sitemap > ul > li > a{ display:block; margin:10px 10px 0 0; padding:5px 8px; background:#7a8b97 url('/images/template/00001/sub/btn_arrow2.png') no-repeat 94% 50%; border:1px solid #596b79; font-family:"NotoM"; font-size:13px; color:#fff; }
+.sitemap > ul > li > ul{ margin:10px 0 0 5px; }
+.sitemap > ul > li > ul > li a{ background:url('/images/template/00001/sub/bul4.png') no-repeat 0 5px; padding-left:8px; color:#666; font-family:"NotoR"; font-size:12px}
+.sitemap > ul > li > a:hover { background-color:#637187}
+.sitemap > ul > li > ul > li a:hover { text-decoration:underline}
+
+/********* 08_과별홈페이지 **********/
+.org_box {border:3px solid #2b415a; background-color:#e8f0f8 !important; background:url('/images/template/00001/sub/org_box_ico.png') no-repeat 20px 50%; padding:40px 20px 40px 180px; margin-bottom:30px}
+	
+@media only screen and (max-width: 800px) {
+	
+	
+	/********* 02_참여마당 **********/
+	/* 부조리공익신고 */
+	.report dl {width:100%;}
+	
+	/* 위센터-센터소개 */
+	.wee { text-align:center}
+	.wee_logo { float:none; display:block; margin:0 auto}
+	.wee_slogan { margin:0 auto}
+	.wee p { margin-top:10px}
+	.wee p br { display:none}
+	.center_info .cen_img { background:none; padding:20px; text-align:left}
+	.center_info ul { padding-right:0}
+	
+	/********* 03_정보마당 **********/
+	/* 시험정보 */
+	.search_Ty { width:100%} 
+	
+	/* 이중한장학회 */
+	.lee_sch > ul > li { width:100%}
+	
+	/********* 05_교육청소개 **********/
+	/* 교육감인사말 */
+	.greeting { background-position:50% 0; background-size:75%; padding-bottom:0}	
+	.greeting p.gre_t1 { margin-top:80%}
+	.greeting p.gre_t2 { line-height:28px}
+	.greeting div.gre_txt p br { display:none}
+	
+	/* 교육감프로필 */
+	.profile { background-position:100% 585px}
+	.profile .pro_photo { width:100%; background-position:center 0; background-color:#0e1f3a}
+	.profile .pro_info { clear:both; padding:5%}
+	
+	/* 역대교육감 */
+	.super_tit{ background-size:100% 100px}
+	.super_list{ padding:20px 0; min-height:210px; }
+	.super_list .mark{ position:relative; top:0; left:0; background:#374f69; width:80px; height:auto; padding:8px 0; font-size:16px; border-radius:15px; }
+	.super_list .txt1{ padding-top:10px}	
+	.sup_list { width:50%; box-sizing:border-box; padding-right:2%}
+	
+	/* 교육청연혁 */
+	.history_tit { padding-left:5%; background:#477ac7 none; border-radius:15px}
+	.his_list { margin-top:10px}	
+	
+	/* 대전교육기본방향 */
+	.basic_edu { width:49%; height:150px; box-sizing:border-box; padding:0 20px}
+	.basic_edu.mg { margin-left:2%}
+	.basic_edu h2 { margin-bottom:20px}
+	
+	/* 조직도 */
+	.org{ width:700px; background:url('/images/template/00001/sub/org_line_tb_2019.png') no-repeat 50% 80px; margin:20px auto 0 auto; } /* 190102 */
+	.org_group1, .org_group1_1, .org_group1_2{ width:160px; }/* 171121 수정 */
+	.org_group1_1
+	.org_group2 ul{ width:160px; }
+	.org_group3{ margin-top:50px; }
+	.org_group3 .tit, .org_group3 .tit2{ width:160px; }/* 171023 수정 */
+	.org_group3 .cont, .org_group3 .cont2{ width:210px; }/* 171020 수정 */
+	.org_group3 .cont dl, .org_group3 .cont2 dl{ float:none; width:96%; margin:2%; }/* 171020 수정 */
+	.cont_none { display:none}
+	.g3mgt { margin-top:338px;}/* 171121 수정 */	
+	
+	/* 조직도 190102 추가 */
+	.org_group4 .cont, .org_group4 .cont2{box-sizing: border-box;}
+	.org_group4 .cont dl{ float:left; width:96%; margin:0 2% 10px;}
+	.org_group5.fr,.org_group5.fl { float:left; width:46%; margin:50px 1.6%;}
+	.org_group5 .cont, .org_group5 .cont2{box-sizing: border-box;}
+	
+	/* 전화번호주소 */
+	.ul_2 li { width:100%; box-sizing:border-box}
+	.tabTy1.half li{ width:50%; }
+	
+	/* 전화번호주소-교육기관 */
+	.left_area { width:48.5%}
+	.left_area img { width:100%; height:413px}
+	.right_area { width:48.5%}
+	.search_Ty2 dl dd a { min-width:inherit}
+	
+	/* 시교육청CI */
+	.ci1, .ci2, .ci3, .ci4, .ci5 {background-size:150px; min-height:110px}
+	.ci1 p, .ci2 p, .ci3 p, .ci4 p, .ci5 p {padding-left:180px}
+	.ci6, .ci7 { background-size:100%; padding-top:20% !important}
+	
+	/* 파워브랜드활용매뉴얼 */
+	.gridbox p { background-size:100% !important; padding-top:30px}
+	
+	/********* 07_홈페이지가이드 **********/
+	/* 로그인 */
+	.login_ipin { width:100%; margin-top:50px}
+	.login_ipin div {width:49%; height:293px; box-sizing:border-box}
+	.login_ipin div br { display:none}
+	.login_ipin div a { padding:15px 10px; font-size:14px}
+	.login_ipin div a.w50 { width:48.5%}/* 170523 */
+	.login_ipin div.box2 { margin-left:2%}
+	
+	/* 뷰어다운로드 */
+	.viewer_program li{ float:none; width:100%; }	
+		
+	/* 사이트맵 */
+	.sitemap h3{ font-size:20px;  }
+	.sitemap > ul > li{ width:50%; }
+	.sitemap > ul > li > a{ font-size:12px; }
+	.sitemap > ul > li > ul > li a{ font-size:11px; }
+}
+	
+@media screen and (max-width:680px) {	
+
+	/********* 05_교육청소개 **********/
+	/* 역대교육감 */	
+	.sup_list { width:100%; height:auto; padding-right:0; padding-bottom:20px; border-bottom:1px dashed #ccc; margin-top:30px}
+	
+	/* 전화번호주소-교육기관 */
+	.left_area { width:100%}
+	.right_area { width:100%}
+	.right_area h3 { margin-top:20px}
+	.search_Ty2 dl dd > input { width:150px !important}
+}
+
+
+@media only screen and (max-width: 640px) {
+
+	/********* 02_참여마당 **********/	
+	/* 위센터-자료실*/
+	.wee_link { width:90%}
+	.wee_link li { width:48.5%; height:auto}
+	.wee_link li a { box-sizing:border-box; padding:20px}
+	
+	/* 학습종합클리닉센터 190315 */
+	.edu_bg {background: #fff;}
+	
+	/********* 05_교육청소개 **********/
+	/* 교육청연혁 */
+	.his_list span { display:block; background:none}
+	
+	/* 주요업무계획 */
+	.plan_box img { width:80%; height:auto}
+	.plan_box a { top:5px; right:0}
+	h2.plantit { width:90%; margin:20px auto; font-size:18px}
+	.paln_list li { width:100%; min-height:100%}
+	.paln_list li:nth-child(even) { margin-left:0}
+	.paln_list li span {font-size:14px}
+}
+
+@media screen and (max-width:560px) {
+	
+	/********* 02_참여마당 **********/
+	/* 부조리공익신고 */
+	.report dt {width:100%; margin-bottom:5px}
+	
+	/* 위센터-센터소개 */
+	.wee_slogan img { width:100%; height:auto}
+	
+	/* 위센터-자료실*/
+	.wee_link li { width:100%; height:100px; margin:0 0 5px 0 !important}
+	.wee_link li a { height:100px}
+	
+	/********* 03_정보마당 **********/
+	/* 학교운영위원회 */
+	.adv_step>ul>li{ padding:15px 0 0 }
+	.adv_step>ul>li:before{ margin:0 auto; }
+	.adv_step>ul>li.adv_step01,
+	.adv_step>ul>li.adv_step02,
+	.adv_step>ul>li.adv_step03,
+	.adv_step>ul>li.adv_step04,
+	.adv_step>ul>li.adv_step05,
+	.adv_step>ul>li.adv_step06,
+	.adv_step>ul>li.adv_step07,
+	.adv_step>ul>li.adv_step08,
+	.adv_step>ul>li.adv_step09,
+	.adv_step>ul>li.adv_step10,
+	.adv_step>ul>li.adv_step11,
+	.adv_step>ul>li.adv_step12,
+	.adv_step>ul>li.adv_step13,
+	.adv_step>ul>li.adv_step14,
+	.adv_step>ul>li.adv_step15{ background:none;}
+
+	/* 시험정보 */
+	.search_Ty dt { display:block}
+	
+	/********* 05_교육청소개 **********/
+	/* 인사말 */
+	.greeting { background-size:80%}	
+	.greeting p.gre_t1 { margin-top:90%}
+	
+	/* 역대교육감 */
+	.super_list .mark{ font-size:14px; width:70px}
+	.super_list .txt1{ font-size:14px}
+	.super_list .txt2{ font-size:20px}
+	.super_list { background-size:auto 200px}
+	.super_list ul li { padding-right:90px}	
+	
+	/* 대전교육기본방향 */
+	/*.basic_edu { width:100%; height:auto; padding-bottom:30px; margin-top:15px}
+	.basic_edu.mg { margin-left:0} 삭제 */	
+	
+	/* 조직도 */
+	.org{ width:480px; background:url('/images/template/00001/sub/org_line_mb_2019.png') no-repeat 50% 80px; } /* 190102 */
+	.org_group1{ top:100px; width:120px; } /* 190102 */
+	.org_group1 .tit{ background:#8a8a8a; border-radius:5px 5px 0 0; }
+	.org_group1 .tit a{ font-size:14px; padding-top:12px; }
+	.org_group1_2 {width:120px; } /* 190102 추가 */
+	.org_group1_2 .tit{ background:#8a8a8a; border-radius:5px 5px 0 0; } /* 190102 추가 */
+	.org_group1_2 .tit a{ font-size:14px; padding-top:12px; } /* 190102 추가 */
+	.org_group2 .tit{ width:140px; }
+	.org_group2 ul{ width:118px; }
+	.org_group3 .cont, .org_group3 .cont2{ width:140px; }/* 171020 수정 */
+	.org_group4 .tit{ background:#fcb700; border-radius:5px 5px 0 0; } /* 190102 추가 */
+	.org_group4 .tit a{ font-size:14px; padding-top:12px; } /* 190102 추가 */
+	.org_group5 .tit2{ background:#00acb8; border-radius:5px 5px 0 0; } /* 190102 추가 */
+	.org_group5 .tit2 a{ font-size:14px; padding-top:12px; } /* 190102 추가 */
+
+	
+	/* 전화번호주소 - 교육기관*/
+	.left_area img { height:auto}
+	
+	/* 시교육청CI */
+	.ci_download a { width:100%; box-sizing:border-box; display:block; margin-bottom:3px}
+	.ci1, .ci2, .ci3, .ci4, .ci5 {background-size:120px; min-height:90px}
+	.ci1 p, .ci2 p, .ci3 p, .ci4 p, .ci5 p {padding-left:130px}
+	
+	/* 파워브랜드활용매뉴얼 */
+	.gridbox p { width:100%; height:100px; background-size:50% !important; background-position:50% 100% !important; padding-top:0}
+	
+	/********* 07_홈페이지가이드 **********/
+	/* 로그인 */
+	.login_ipin div {width:100%}
+	.login_ipin div.box2 { margin:3% 0 0 0}
+	
+	/* 저작권신고서비스 */
+	.copyright_box { padding:15px; background:none}
+	
+	/* 사이트맵 */
+	.sitemap > ul > li{ width:100%; margin-bottom:0}
+	.sitemap > ul > li:last-child { margin-bottom:10px}
+	
+	/********* 08_과별홈페이지 **********/
+	.org_box {background:none; padding:20px}
+
+	.noti_txt{margin-top:30px;}
+	
+		
+}
+
+@media screen and (max-width:480px) {
+			
+	/********* 03_정보마당 **********/	
+	/* 대전행복교육장학재단*/
+	.sch_tit { width:100%; height:auto}
+	.sch_bg { background:none}	
+		
+	/********* 05_교육청소개 **********/
+	/* 주요업무계획 */
+	h2.plantit { width:100%; font-size:15px}
+	
+	/* 전화번호 */
+	.tabTy1 li{ width:50%; }
+	.bgi1 { background:none}
+	.input_search { width:180px}
+	.tabTy1 li{ width:50%; }
+	
+	/* 시교육청CI */
+	.ci1, .ci2, .ci3, .ci4, .ci5 {background-size:50%; background-position:50% 0; padding-top:45%}
+	.ci1 p, .ci2 p, .ci3 p, .ci4 p, .ci5 p {padding-left:0}	
+	
+	.org_wrap {width:100%; overflow-x:scroll;} /* 221108 */
+}
+
+@media screen and (max-width :380px) {
+	
+	/********* 02_참여마당 **********/	
+	/* 위센터-자료실*/
+	.wee_link { width:100%}
+	
+	/********* 05_교육청소개 **********/
+	/* 조직도 */
+	.org{/* width:300px; */} /* 221108 */
+	.org_group3 .cont, .org_group3 .cont2{ width:120px}/* 171020 수정 */
+		
+}
+

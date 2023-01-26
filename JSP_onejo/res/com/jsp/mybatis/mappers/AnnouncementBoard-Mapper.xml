@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AnnouncementBoard-Mapper">
+	<sql id="search">
+		<if test="searchType == 't'.toString()">
+			and title like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'w'.toString()">
+			and writer like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'c'.toString()">
+			and content like '%'||#{keyword}||'%'			
+		</if>
+		<if test="searchType == 'tc'.toString()">
+			and (
+			title like '%'||#{keyword}||'%'
+			or
+			content like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<if test="searchType == 'cw'.toString()">
+			and (
+			writer like '%'||#{keyword}||'%'
+			or
+			content like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<if test="searchType == 'tcw'.toString()">
+			and (
+			title like '%'||#{keyword}||'%'
+			or
+			writer like '%'||#{keyword}||'%'
+			or
+			content like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<!-- 부서 -->
+		<if test="searchType == 'd'.toString()">
+			and department like '%'||#{keyword}||'%'			
+		</if>
+		<!-- 부서,제목 -->
+		<if test="searchType == 'td'.toString()">
+			and (
+			title like '%'||#{keyword}||'%'
+			or
+			department like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<!-- 부서,작성자 -->
+		<if test="searchType == 'wd'.toString()">
+			and (
+			writer like '%'||#{keyword}||'%'
+			or
+			department like '%'||#{keyword}||'%'						
+			)			
+		</if>
+		<!-- 부서,본문 -->
+		<if test="searchType == 'cd'.toString()">
+			and (
+			content like '%'||#{keyword}||'%'
+			or
+			department like '%'||#{keyword}||'%'						
+			)			
+		</if>
+	</sql>
+	
+	<select id="selectSearchAnnouncementBoardList" resultType="announcementBoard">
+		select *
+		from ANNOUNCEMENTBOARD
+		where abno is not null  			  	
+		<include refid="search" />
+		order by abno desc
+	</select>
+	
+	<select id="selectSearchAnnouncementBoardListCount"  resultType="int">
+		select count(*)
+		from ANNOUNCEMENTBOARD
+		where abno is not null  			  	
+		<include refid="search" />
+		order by abno desc
+	</select>
+	
+	<update id="insertAnnouncementBoard">
+		insert 
+		into announcementBoard(abno,title,writer,content,department)
+		values (#{abno},#{title},#{writer},#{content},#{department})
+	</update>
+	
+	<select id="selectAnnouncementBoardSeqNext" resultType="int">
+		select noticeBoard_seq.nextval as abno from dual
+	</select>
+	
+	<select id="selectAnnouncementBoardByNbno"  resultType="announcementBoard">
+		select * 
+		from announcementBoard 
+		where abno=#{abno}
+	</select>
+	
+	<update id="increaseViewCnt" parameterType="int">
+		update 
+		announcementBoard 
+		set viewcnt=viewcnt+1 
+		where abno=#{abno}
+	</update>
+	
+	<update id="updateAnnouncementBoard" parameterType="announcementBoard">
+		update 
+		noticeBoard
+		set title=#{title}, content=#{content}, department=#{department}, updatedate=sysdate 
+		where abno=#{abno}
+	</update>
+	
+	<update id="deleteAnnouncementBoard" parameterType="int">
+		delete 
+		from announcementBoard
+		where abno=#{abno}
+	</update>
+</mapper>
+
+
+
+
+
+
+
