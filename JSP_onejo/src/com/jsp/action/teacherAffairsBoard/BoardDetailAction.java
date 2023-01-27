@@ -31,6 +31,7 @@ private TeacherAffairsBoardService teacherAffairsBoardService;
 			TeacherAffairsBoardVO teacherAffairsBoard = null;
 			if(from != null && from.equals("list")) {
 				teacherAffairsBoard = teacherAffairsBoardService.read(bno);
+				url = "redirect:/board/teacherAffairsBoard/detail.do?bno=" + bno;
 			}else {
 				teacherAffairsBoard = teacherAffairsBoardService.getTeacherAffairsBoard(bno);
 			}
@@ -41,13 +42,13 @@ private TeacherAffairsBoardService teacherAffairsBoardService;
 			
 			request.setAttribute("teacherAffairsBoard", teacherAffairsBoard);
 			
+			return url;
 		}catch(Exception e) {
 			e.printStackTrace();			
 			url=null;
 			throw e;
 		}
 		
-		return url;
 	}
 
 }
